@@ -2,24 +2,15 @@
 
 # Tugas Besar Komunikasi Data Kelompok 1
 
-### Anggota:
-### 1. Johanes Wilian Ang (1822002)
-### 2. Erwin Erikson (1822003)
-### 3. Johnny (1822004)
-### 4. Andrian Syah (1922009)
+### Anggota:<br>1. Johanes Wilian Ang (1822002)<br>2. Erwin Erikson (1822003)<br>3. Johnny (1822004)<br>4. Andrian Syah (1922009)
 
 <br>
 
 # __Project Bot Telegram__
-Program ini memungkinkan pengguna mengirim pesan ke Telegram melalui aplikasi web.
+Program ini memungkinkan pengguna mengirim pesan ke Telegram melalui aplikasi web.<br>Pengiriman pesan secara otomatis ke Telegram ini menggunakan channel BotFather.
 
-Pengiriman pesan secara otomatis ke Telegram ini menggunakan channel BotFather.
-
-<br>
 
 ## Tampilan pada aplikasi web
-
-<br>
 
 <img src="../Gambar/halaman_website.jpg" alt="Logo Iteba" width="600"/>
 
@@ -28,8 +19,6 @@ Pengiriman pesan secara otomatis ke Telegram ini menggunakan channel BotFather.
 <br>
 
 ## Tampilan pada Telegram (Iteba_Kelompok_SatuBot)
-
-<br>
 
 <img src="../Gambar/halaman_telegram.jpg" alt="Logo Iteba" width="300"/>
 
