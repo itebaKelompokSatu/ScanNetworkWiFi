@@ -13,7 +13,8 @@ const char* password = "Db2ibmrd7";
 const int RSSI_MAX =-50;      // menentukan kekuatan sinyal maksimum dalam dBm
 const int RSSI_MIN =-100;     // menentukan kekuatan sinyal minimum dalam dBm
 
-String s = "Mencari Sinyal WiFi...";
+String r = "Mencari Sinyal WiFi...";
+String s = "Jaringan tidak ditemukan.";
 String t = "  jaringan ditemukan.";
 String u = "";
 String za = "\n";
@@ -60,16 +61,20 @@ void setup() {
 }
 
 void loop() {
-  Serial.println(s);
-  kirimData(s);
+  Serial.println(r);
+  Serial.println("");
+  kirimData(r);
 
   int n = WiFi.scanNetworks();
   String sn = String(n);
   
   if (n == 0) {
-    Serial.println("  Jaringan tidak ditemukan.");
+    Serial.println("Jaringan tidak ditemukan.");
+    kirimData(s);
   } else {
     String a = sn + t + za + za;
+    Serial.print(n);
+    Serial.println(t);
     
     u = "";
     for (int i = 0; i < n; ++i) {
@@ -80,10 +85,13 @@ void loop() {
       String y = nv + w + x + za;
       u = u + y;
 
+      Serial.print("  ");
+      Serial.print(nv);
+      Serial.print(w);
+      Serial.println(x);
+
       delay(10);
     }
-    Serial.println(a);
-    Serial.println(u);
     String zu = a + u;
     kirimData(zu);
     u = "";
@@ -104,10 +112,7 @@ void kirimData(String isi) {
     http.addHeader("Content-Type", "application/x-www-form-urlencoded");
     
     auto httpCode = http.POST(postData);
-    String isiData = http.getString();
-
-    Serial.println(postData); 
-    Serial.println(isiData);   
+    String isiData = http.getString();     // Mengambil data post yang dikirim
   
     http.end();
     delay(3000);
