@@ -10,11 +10,13 @@
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
-%\renewcommand{\figurename}{Gambar}
-%\renewcommand{\tablename}{Tabel}
-%\renewcommand{\IEEEkeywordsname}{Keywords}
-%\usepackage{caption}
+\renewcommand{\figurename}{Gambar}
+\renewcommand{\tablename}{Tabel}
+\renewcommand{\IEEEkeywordsname}{Keywords}
+\usepackage{caption}
 \usepackage{pgf}
+
+\graphicspath{{./Gambar/}}
 
 \begin{document}
     
@@ -32,13 +34,23 @@ Andrian Syah\IEEEauthorrefmark{4}
 Batam, Indonesia \\
 Email:
 \IEEEauthorrefmark{1}1822002@student.iteba.ac.id, 
-\IEEEauthorrefmark{2}1822002@student.iteba.ac.id,
-\IEEEauthorrefmark{3}1822002@student.iteba.ac.id,
-\IEEEauthorrefmark{4}1922009@student.iteba.ac.id,
+\IEEEauthorrefmark{2}1822003@student.iteba.ac.id,
+\IEEEauthorrefmark{3}1822004@student.iteba.ac.id,
+\IEEEauthorrefmark{4}1922009@student.iteba.ac.id
 }}
 
 \maketitle
 
+\begin{abstract}
+    Dalam sistem komunikasi data berbasis \emph{wireless}, pemanfaatan \emph{WiFi} menjadi pilihan banyak pengguna karena keunggulan mobilitas dan kecepatan transfer data. Kualitas \emph{signal strength} sangat berpengaruh dalam layanan komunikasi data ini, sehingga kualitas \emph{signal strength} pada jaringan \emph{WiFi} perlu diketahui. Pemindaian jaringan \emph{WiFi} menggunakan perangkat \emph{NodeMCU V3} dapat mengukur \emph{signal strength} dari masing-masing jaringan, lalu data hasil pemindaian dan pengukuran \emph{signal strength} dikirim ke Telegram menggunakan \emph{channel} BotFather melalui \emph{webserver} agar dapat diketahui hasilnya.
+\end{abstract}
+
+\begin{IEEEkeywords}
+    \emph{WiFi}, \emph{signal strength}, \emph{NodeMCU V3}, \emph{webserver}, \emph{BotFather}
+\end{IEEEkeywords}
+
 \section{Pendahuluan}
 
+\bibliographystyle{IEEEtran}
+\bibliography{referensi.bib}
 \end{document}
