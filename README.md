@@ -12,3 +12,7 @@ Program memindai jaringan WiFi dan mengetahui kekuatan sinyal masing-masing jari
 Data hasil pemindaian NodeMCU V3 akan dikirim ke Telegram menggunakan channel BotFather melalui webserver.
 
 
+# Nama Bot Telegram 
+@Iteba_Kelompok_SatuBot
+
+
