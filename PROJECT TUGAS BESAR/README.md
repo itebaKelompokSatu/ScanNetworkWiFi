@@ -9,7 +9,9 @@
 # __dBmWiFi Server BotTelegram__
 Program memindai jaringan WiFi dan mengetahui kekuatan sinyal masing-masing jaringan dalam dBm menggunakan NodeMCU V3.
 
-Data hasil pemindaian NodeMCU V3 akan dikirim ke Telegram menggunakan channel BotFather melalui webserver.
+Data hasil pemindaian NodeMCU V3 akan dikirim ke Telegram menggunakan channel BotFather melalui webserver setelah pengguna mengirim perintah ke bot sesuai intruksi di "/info".
+
+Untuk menerima pembaruan pada bot ini menggunakan metode Webhook. 
 
 ### Langkah-langkah:
 <ol>
