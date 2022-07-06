@@ -81,14 +81,18 @@ void loop() {
       int v = i + 1;
       String nv = String(v) + ") ";
       String w = String(WiFi.SSID(i)) + "  ";
-      String x = String(WiFi.RSSI(i)) + "dBm";
-      String y = nv + w + x + za;
+      String x = String(WiFi.RSSI(i)) + "dBm (";
+      String xv = String(dBmtoPercentage(WiFi.RSSI(i)));
+      String xw = String("%)");
+      String y = nv + w + x + xv + xw + za;
       u = u + y;
 
       Serial.print("  ");
       Serial.print(nv);
       Serial.print(w);
-      Serial.println(x);
+      Serial.print(x);
+      Serial.print(dBmtoPercentage(WiFi.RSSI(i)));
+      Serial.println("%)");
 
       delay(10);
     }
@@ -99,7 +103,7 @@ void loop() {
   }
   Serial.println("");
 
-  delay(5000);
+  delay(2000);
   WiFi.scanDelete();  
 }
 
@@ -115,7 +119,20 @@ void kirimData(String isi) {
     String isiData = http.getString();     // Mengambil data post yang dikirim
   
     http.end();
-    delay(3000);
+    delay(700);
+}
+
+// Kekuatan sinyal dalam %
+int dBmtoPercentage(int dBm) {
+  int quality;
+    if(dBm <= RSSI_MIN) {
+        quality = 0;
+    } else if(dBm >= RSSI_MAX) {  
+        quality = 100;
+    } else {
+        quality = 2 * (dBm + 100);
+    }
+    return quality;
 }
 
 
