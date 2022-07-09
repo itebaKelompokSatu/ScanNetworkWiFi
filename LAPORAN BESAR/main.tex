@@ -1,0 +1,156 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{graphicx}
+
+
+% path gambar
+\graphicspath{{./Gambar/}}
+
+% JUDUL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Mengirim Data Signal Strength Hasil Pemindaian Jaringan WiFi menggunakan NodeMCU V3 ke Telegram Dengan Channel BotFather}
+
+% PENULIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Johanes Wilian Ang\IEEEauthorrefmark{1},Erwin Erikson\IEEEauthorrefmark{2},Johnny\IEEEauthorrefmark{3}, Andrian Syah\IEEEauthorrefmark{4}\\
+\textit{Fakultas Teknologi Informasi}\\
+\textit{Teknik Komputer}\\
+\textit{Institut Teknologi Batam}\\
+Batam, Indonesia\\
+Email: \{\IEEEauthorrefmark{1}1822002,\IEEEauthorrefmark{2}1822003,\IEEEauthorrefmark{3}1822004,\IEEEauthorrefmark{4}1922009\}@student.iteba.ac.id}
+
+\begin{document}
+
+% untuk mengeluarkan judul dan author
+\maketitle
+
+% ABSTRAK %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+    Dalam sistem komunikasi data berbasis \emph{wireless}, pemanfaatan \emph{WiFi} 
+    menjadi pilihan banyak pengguna karena keunggulan mobilitas dan kecepatan transfer data.
+    Kualitas \emph{signal strength} sangat berpengaruh dalam layanan komunikasi data ini, 
+    sehingga kualitas \emph{signal strength} pada jaringan \emph{WiFi} perlu diketahui.
+    Pemindaian jaringan \emph{WiFi} menggunakan perangkat \emph{NodeMCU V3} dapat mengukur \emph{signal strength} dari 
+    masing-masing jaringan, lalu data hasil pemindaian dan pengukuran \emph{signal strength} dikirim ke
+    Telegram menggunakan \emph{channel} BotFather melalui \emph{webserver} agar dapat diketahui hasilnya.
+\end{abstract}
+
+% kata kunci %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{IEEEkeywords}
+    \emph{WiFi}, \emph{signal strength}, \emph{NodeMCU V3}, \emph{webserver}, \emph{BotFather}
+\end{IEEEkeywords}
+
+% pendahuluan %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Pendahuluan}
+\vspace{0.1cm}
+Perkembangan teknologi merupakan hal yang sejalan dengan 
+perkembangan zaman, dimana masyarakat kini selalu
+menginginkan berbagai hal agar dapat dilakukan secara otomatis
+ataupun dari jarak jauh. Perkembangan smarthome dengan
+kontrol jarak jauh menjadi salah satu fokus utama dalam
+perkembangan teknologi dimana pengontrolannya dilakukan dari
+jarak jauh dan secara real time dan diharapkan pula bagi generasi
+masa kini untuk dapat mengimplementasikan beberapa bagian
+dari teknologi yang cukup sederhana dalam lingkungan masyarakat. ada
+beberapa teknik analisis yang di gunakan untuk menentukan
+sistem, perangkat dan juga bagaimana pengaplikasiannya. Maka
+dari itu dipilihlah Telegram bot sebagai interface antara perangkat
+dan pengguna dimana board ESP8266 Module sebagai pusat
+kontrolnya dan pemrogramannya menggunakan Ardiono IDE.
+Semua hal ini masih perlu di pelajari terlebih dahulu dengan
+dukungan berbagai jurnal penelitian ,
+Setelah proses analisis dilakukan maka akan didapat hasil
+berupa suatu sistem notifikasi scanner yang di program untuk dapat
+dikontrol dari jarak jauh. Pengontrolan ini dilakukan dengan
+bantuan internet sebagai media penghubungnya dan juga Bot
+Telegram sebagai media penginputan perintah yang diberikan
+dengan jarak yang jauh apabila terdapat koneksi internet 
+antara perangkat penerima dan juga pengirim 
+
+
+\section{Penjelasan}
+\subsection{Bot Telegram}
+    Telegram adalah salah satu platform perpesanan sejenis dengan
+    WhatApps, dimana sistem perpesanan di telegram juga bisa mencakup
+    lintas platform. Bot Telegram 
+    sendiri merupakan salah satu fitur dari Telegram yang mana funginya untuk
+    mempermudah kegiatan dalam mengakses Telegram. Bot itu sendiri
+    berasal dari kata robot atau mesin pekerja yang meringkankan pekerjaan.
+    Bot di dalam telegram bekerja dengan cara inputan perintah yang buat.
+    Dalam pengaturan atau pebuatan bot telegram ada dua cara yang 
+    bisa dilakukan, yang pertama dengan membuat program dengan bahasa
+    mesin lalu diinput ke protokol telegram. dan yang kedua yaitu dengan
+    meminta akses bot telegram ke BotFather, cara ini yang saya
+    rekomendasikan dan saya gunakan dalam penelitian kali ini. Membuat bot
+    Telegram dengan meminta Akses kepada BotFather dilakukan untuk
+    mendapatkan kode API, kode ini merupakan kode unik khusus bagi suatu
+    akun Bot Telegram untuk Koneksi dengan sistem di luar Telegram itu
+    sendiri. Cara kerja kode ini mirip seperti nomor HP, yang mana setiap
+    penguna Bot Telegram memiliki kode API tersendiri dan tidak dapat di copy
+    oleh orang lain, namun jika pengguna ingin mengubah kode API yang
+    dimilikinya bisa dilakukan dengan cara menghapus Bot Telegram lalu
+    membuat ulang Bot Telegram dengan IDE yang sama.
+    BotFather sendiri merupakan suatu Fitur AI milik Telegram yang
+    mengatur pembuatan Bot Telegram yang bekerja otomatis, sistem
+    BotFather ini lebih merujuk ke sistem pembalasan pesan otomatis yang
+    mana pemeberian kode API yang diberikan dilakukan secara acak.\cite{thiar2020penerapan}
+
+\section{Analisis Hasil Pengukuran RSSI (Receive Signal Strength Indicator)}
+\subsection{Hasil Pengukuran}
+Berikut ini perhitungan menggunakan persamaan RSSI 
+pada jaringan wireless yang ada disekitar 
+kampus iteba terhadap pengahalang
+
+
+
+\begin{table}[htbp]
+    \caption{Table Analisis Pengukuran RSSI}
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+    \textbf{SSID} & \textbf{\textit{Jarak}}& \textbf{\textit{RSSI}}& \textbf{\textit{Penerima Sinyal}} \\
+    \hline
+    Angeli & 4 meter& -76 dBm & 48  \\
+    \hline
+    VEGAZUS & 12 meter& -88 dBm & 24  \\
+    \hline
+    Aldikadek & 2 meter& -36 dBm & 100   \\
+    \hline
+    \multicolumn{4}{l}{$^{\mathrm{a}}$Hasil dari Integrasi Dari Nodemcu Ke telegram}
+    \end{tabular}
+    \label{tab1}
+    \end{center}
+    \end{table}
+
+\subsection{Pengaruh Besar nya Kekuatan sinyal}
+Kekuatan sinyal RSSI yang diterima oleh
+receiver tidak hanya bergantung pada jarak
+antara transmitter dan receiver, akan tetapi
+menunjukkan variasi yang besar terhadap fading
+dan shadowing pada sebuah lokasi. Hal ini
+terlihat pada tempat penelitian yang kondisi
+lingkungannya memiliki banyak property seperti
+didalam ruangan terdapat sekat, lemari, meja dan
+property lainnya, sehingga akan terjadi peredaman sinyal, pembelokan sinyal dan pemantulan
+sinyal yang mengakibatkan penurunan kuat
+sinyal yang dipancarkan oleh transmiter kepada
+receiver, walaupun jarak antara transmiter dan
+receiver cukup dekat, namun terhalang oleh
+adanya property disekitarnya, maka kekuatan
+sinyalnya akan menurun dan kemungkinan
+kekuatan sinyal nya akan sama dengan kekuatan
+sinyal pada jarak antara transmiter dan receiver
+yang cukup jauh, namun tidak memiliki
+penghalang disekitarnya.
+
+
+
+
+\section{Hasil dan Pembahasan}
+
+
+
+\section{Kesimpulan}
+
+% referensi %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{IEEEtran}
+\bibliography{reference}
+
+\end{document}
