@@ -3,7 +3,7 @@
 
 
 % path gambar
-\graphicspath{{./Gambar/}}
+\graphicspath{{./picture/}}
 
 % JUDUL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Mengirim Data Signal Strength Hasil Pemindaian Jaringan WiFi menggunakan NodeMCU V3 ke Telegram Dengan Channel BotFather}
@@ -39,7 +39,6 @@ Email: \{\IEEEauthorrefmark{1}1822002,\IEEEauthorrefmark{2}1822003,\IEEEauthorre
 
 % pendahuluan %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Pendahuluan}
-\vspace{0.1cm}
 Perkembangan teknologi merupakan hal yang sejalan dengan 
 perkembangan zaman, dimana masyarakat kini selalu
 menginginkan berbagai hal agar dapat dilakukan secara otomatis
@@ -56,7 +55,8 @@ dan pengguna dimana board ESP8266 Module sebagai pusat
 kontrolnya dan pemrogramannya menggunakan Ardiono IDE.
 Semua hal ini masih perlu di pelajari terlebih dahulu dengan
 dukungan berbagai jurnal penelitian ,
-Setelah proses analisis dilakukan maka akan didapat hasil
+    
+    Setelah proses analisis dilakukan maka akan didapat hasil
 berupa suatu sistem notifikasi scanner yang di program untuk dapat
 dikontrol dari jarak jauh. Pengontrolan ini dilakukan dengan
 bantuan internet sebagai media penghubungnya dan juga Bot
@@ -67,6 +67,13 @@ antara perangkat penerima dan juga pengirim
 
 \section{Penjelasan}
 \subsection{Bot Telegram}
+\vspace{0.2cm}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.2\textwidth]{Botfather.png}
+    \caption{BotFather Telegram}
+\end{figure}
+
     Telegram adalah salah satu platform perpesanan sejenis dengan
     WhatApps, dimana sistem perpesanan di telegram juga bisa mencakup
     lintas platform. Bot Telegram 
@@ -77,9 +84,10 @@ antara perangkat penerima dan juga pengirim
     Dalam pengaturan atau pebuatan bot telegram ada dua cara yang 
     bisa dilakukan, yang pertama dengan membuat program dengan bahasa
     mesin lalu diinput ke protokol telegram. dan yang kedua yaitu dengan
-    meminta akses bot telegram ke BotFather, cara ini yang saya
-    rekomendasikan dan saya gunakan dalam penelitian kali ini. Membuat bot
-    Telegram dengan meminta Akses kepada BotFather dilakukan untuk
+    meminta akses bot telegram ke BotFather.
+   
+    
+        Membuat bot Telegram dengan meminta Akses kepada BotFather dilakukan untuk
     mendapatkan kode API, kode ini merupakan kode unik khusus bagi suatu
     akun Bot Telegram untuk Koneksi dengan sistem di luar Telegram itu
     sendiri. Cara kerja kode ini mirip seperti nomor HP, yang mana setiap
@@ -97,9 +105,21 @@ antara perangkat penerima dan juga pengirim
 
     NodeMCU merupakan sebuah platform IoT yang bersifat open source dan juga include dengan module ESP 12, dan berjalan pada firmware esp8266 yang menjadikan NodeMCU sebuah mikrokontroller yang telah dilengkapi dengan module Wifi didalamnya.
 
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{Nodem.png}
+        \caption{GPIO NodeMCU v2}
+    \end{figure}
+
     NodeMCU berfungsi sama seperti Arduino, walaupun dengan IC, GPIO, dan Bahasa program yang digunakan berbeda tetapi tujuannya sama yaitu untuk mengontrol suatu system, dan kelebihannya dibandingkan arduino yaitu telah include dengan module Wifi yang tertanam pada systemnya.
 
     \subsection{Cloud Hosting}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.4\textwidth]{cloudhosting.jpg}
+        \caption{BotFather Telegram}
+    \end{figure}
+
     Cloud hosting adalah jenis hosting yang menggunakan beberapa server untuk menyeimbangkan beban (load) server dan memaksimalkan server uptime.
     Teknologi cloud hosting menggabungkan beberapa server yang bekerja seperti satu server utuh. Gabungan dari beberapa server ini biasanya disebut dengan “cloud cluster”.
     Semakin banyak server yang tergabung di dalam cluster, semakin besar juga resources yang bisa dibagikan oleh cluster tersebut. 
@@ -108,7 +128,7 @@ antara perangkat penerima dan juga pengirim
     Saat ini sudah banyak web owner yang mulai memindahkan situs mereka ke platform cloud. Namun, perlu diingat bahwa solusi hosting ini tidak diperuntukan untuk semua jenis website.
     Misalnya, jika saat ini Anda mengelola situs web dengan lalu lintas rendah dan tidak membutuhkan banyak resources, meningkatkan paket ke cloud hosting mungkin tidak perlu.
     Jika situs web Anda mendapatkan lonjakan lalu lintas yang besar, maka mungkin ingin mempertimbangkan upgrade cloud hosting untuk mencegah server overload.
-    
+    \vspace{0.2cm}
     \subsubsection{Kelebihan Cloud Hosting}
       \begin{itemize}
         \item Uptime Lebih Stabil
@@ -117,17 +137,17 @@ antara perangkat penerima dan juga pengirim
         \item Biaya Fleksibel
         \item Data Recovery Lebih Mudah
       \end{itemize}
-
+      \vspace{0.2cm}
       \subsubsection{Kekurangan Cloud Hosting}
       \begin{itemize}
         \item Lebih rentan terkena cyber-attack
         \item Kecepatan server bergantung pada kecepatan internet
-        \item Pake cloud bisa menjadi mahal
+        \item Pakai cloud bisa menjadi mahal
       \end{itemize}
     
 
 
-\section{Analisis Hasil Pengukuran RSSI (Receive Signal Strength Indicator)}
+\section{Hasil dan Pembahasan}
 \subsection{Hasil Pengukuran}
 Berikut ini perhitungan menggunakan persamaan RSSI 
 pada jaringan wireless yang ada disekitar 
@@ -174,13 +194,6 @@ kekuatan sinyal nya akan sama dengan kekuatan
 sinyal pada jarak antara transmiter dan receiver
 yang cukup jauh, namun tidak memiliki
 penghalang disekitarnya.
-
-
-
-
-\section{Hasil dan Pembahasan}
-
-
 
 \section{Kesimpulan}
 

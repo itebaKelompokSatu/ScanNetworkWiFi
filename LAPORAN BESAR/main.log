@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.24)  17 JUL 2022 11:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.24)  17 JUL 2022 12:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -181,16 +181,31 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <11> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
+<./picture//Botfather.png, id=1, 297.36093pt x 421.575pt>
+File: ./picture//Botfather.png Graphic file (type png)
+<use ./picture//Botfather.png>
+Package pdftex.def Info: ./picture//Botfather.png  used on input line 73.
+(pdftex.def)             Requested size: 103.19843pt x 146.30551pt.
 
-Underfull \vbox (badness 1038) has occurred while \output is active []
+Underfull \vbox (badness 1127) has occurred while \output is active []
 
  [1{C:/Users/hp/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 
-]
+ <./picture//Botfather.png>]
+<./picture//Nodem.png, id=14, 542.025pt x 452.4403pt>
+File: ./picture//Nodem.png Graphic file (type png)
+<use ./picture//Nodem.png>
+Package pdftex.def Info: ./picture//Nodem.png  used on input line 110.
+(pdftex.def)             Requested size: 154.80157pt x 129.21606pt.
+<./picture//cloudhosting.jpg, id=15, 622.325pt x 333.245pt>
+File: ./picture//cloudhosting.jpg Graphic file (type jpg)
+<use ./picture//cloudhosting.jpg>
+Package pdftex.def Info: ./picture//cloudhosting.jpg  used on input line 119.
+(pdftex.def)             Requested size: 206.39685pt x 110.52036pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 114.
-
+(Font)              <7> on input line 134.
+ [2 <./picture//Nodem.png> <./picture//cloudhosting.jpg>]
 No file main.bbl.
 
 ** Conference Paper **
@@ -203,19 +218,21 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2] (main.aux) ) 
+[3
+
+] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 2146 strings out of 478582
- 38462 string characters out of 2854168
- 343751 words of memory out of 3000000
- 20351 multiletter control sequences out of 15000+600000
+ 2173 strings out of 478582
+ 39112 string characters out of 2854168
+ 345752 words of memory out of 3000000
+ 20372 multiletter control sequences out of 15000+600000
  506935 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,62p,393b,340s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 105204 bytes).
+Output written on main.pdf (3 pages, 655682 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
+ 58 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
