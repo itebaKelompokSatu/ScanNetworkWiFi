@@ -5,8 +5,8 @@
 #include <ESP8266HTTPClient.h>
 
 // konfigurasi jaringan wifi
-const char* ssid = "Aldikadek";
-const char* password = "Db2ibmrd7";
+const char* ssid = "Student ITEBA";
+const char* password = "itebastudent";
 
 #define PIN_LED 2             // inisialisasi LED di pin 2
 

@@ -158,17 +158,14 @@ antara perangkat penerima dan juga pengirim
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.2\textwidth]{Flowchart NodeMCU.pdf}
-    \caption{Flowchart webserver}
+    \caption{Flowchart NodeMCU}
 \end{figure}
 \vspace{1cm}
 
-
-\subsection{Cloud Hosting}
-
 \subsection{Hasil Pengukuran}
+\subsubsection{Hasil Pengukuran Dirumah}
 Berikut ini perhitungan menggunakan persamaan RSSI 
-pada jaringan wireless yang ada disekitar 
-kampus iteba terhadap pengahalang
+pada jaringan wireless yang ada disekitar rumah terhadap pengahalang
 
     \begin{table}[htbp]
     \caption{Table Analisis Pengukuran RSSI}
@@ -188,6 +185,41 @@ kampus iteba terhadap pengahalang
     \label{tab1}
     \end{center}
     \end{table}
+
+    \subsubsection{Hasil Pengukuran Jaringan Pada Kampus ITEBA}
+    Berikut ini perhitungan menggunakan persamaan RSSI 
+pada jaringan wireless yang ada disekitar Area Kantin Kampus ITEBA 
+ terhadap pengahalang seperti pepohonan dan intervensi objek lain nya dengan studi kasus dimana dalam 1 access
+ point dibagi menjadi beberapa SSID pada tabel berikut ini : 
+
+ \begin{table}[htbp]
+    \caption{Table Analisis Pengukuran RSSI}
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+    \textbf{SSID} &  \textbf{\textit{Penerimaan Sinyal}}& \textbf{\textit{RSSI}} \\
+    \hline
+    Student ITEBA & 100 & -32 dBm   \\
+    \hline
+    Dosen ITEBA2 & 26 & -87 dBm   \\
+    \hline
+    Wily & 36 & -82 dBm   \\
+    \hline
+    Dosen BTP2  & 100 & -830 dBm   \\
+    \hline
+    Student BTP  & 100 & -32 dBm   \\
+    \hline
+    SANJAYAAAY   & 36 & -82 dBm   \\
+    \hline
+    Manajemen Rekayasa ITEBA  & 42 & -79 dBm   \\
+    \hline
+
+    \multicolumn{3}{l}{$^{\mathrm{a}}$Hasil dari Integrasi Dari Nodemcu Ke telegram}
+    \end{tabular}
+    \label{tab1}
+    \end{center}
+    \end{table}
+
 
 \subsection{Pengaruh Besar nya Kekuatan sinyal}
 Kekuatan sinyal RSSI yang diterima oleh
